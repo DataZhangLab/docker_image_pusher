@@ -15,4 +15,8 @@ kubernetesui/metrics-scraper:v1.0.8
 # 系统镜像
 debian:12
 
-busybox:latest​
+
+
+# Flannel 镜像
+ghcr.io/flannel-io/flannel:v0.28.8
+ghcr.io/flannel-io/flannel-cni-plugin:v1.9.1-flannel2​
