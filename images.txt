@@ -20,3 +20,36 @@ debian:12
 # Flannel 镜像
 ghcr.io/flannel-io/flannel:v0.28.8
 ghcr.io/flannel-io/flannel-cni-plugin:v1.9.1-flannel2​
+# ===== K8s 核心组件镜像 (v1.27.3) =====
+# 这些是 kubeadm 初始化集群时必须的，提前转存好，部署时从阿里云拉取，速度飞快
+k8s.chenby.cn/kube-apiserver:v1.27.3
+k8s.chenby.cn/kube-controller-manager:v1.27.3
+k8s.chenby.cn/kube-scheduler:v1.27.3
+k8s.chenby.cn/kube-proxy:v1.27.3
+k8s.chenby.cn/pause:3.9
+k8s.chenby.cn/etcd:3.5.7-0
+k8s.chenby.cn/coredns:v1.10.1
+
+# ===== 基础工具镜像（轻量级，适合调试）=====
+# Alpine: 5MB 
+alpine:3.19
+# Busybox: 1MB 
+busybox:1.36
+
+# ===== Web 服务器镜像
+nginx:alpine
+nginx:1.25-alpine
+httpd:alpine
+
+# ===== 语言/应用镜像（练习更复杂的部署场景）=====
+# Python 应用镜像
+python:3.11-alpine
+# Node.js 应用镜像
+node:20-alpine
+# Redis 缓存
+redis:7.2-alpine
+# MySQL 数据库
+mysql:8.0
+
+# ===== K8s 专用练习镜像 =====
+gcr.io/google-samples/kuard-amd64:1
